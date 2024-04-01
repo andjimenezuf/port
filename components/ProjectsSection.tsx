@@ -8,7 +8,7 @@ const projects = [
   {
     name: "Investi Track",
     description:
-      "Implemented a stock visualizerthat using machine learning algorithm called Long Short-Term Memory (LSTM). Planning to redesign the website using React",
+      "Implemented a stock visualizer using machine learning algorithm called Long Short-Term Memory (LSTM). Planning to redesign the website using React",
     image: "/iinvestiTrack.png",
     github: "",
     // link: "https://thankfulthoughts.io/",
