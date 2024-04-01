@@ -3,20 +3,19 @@ import {
   AiOutlineGithub,
   AiOutlineMail,
   AiOutlineLinkedin,
-  AiOutlineCheck 
-} from "react-icons/ai"
+  AiOutlineCheck,
+} from "react-icons/ai";
 
 
 const Footer = () => {
 
   const [isCopied, setIsCopied] = useState(false);
 
-  // Function to copy email to clipboard and show the copied icon
   const copyEmailToClipboard = () => {
     navigator.clipboard.writeText("ajimenez1@ufl.edu").then(() => {
       setIsCopied(true);
       setTimeout(() => {
-        setIsCopied(false); // Hide the copied icon after 2 seconds
+        setIsCopied(false);
       }, 2000);
     });
   };
@@ -28,25 +27,35 @@ const Footer = () => {
         <div className="flex flex-row items-center justify-center space-x-1 text-neutral-500 dark:text-neutral-100">
           © 2024 Andres Jimenez<a href="/" className="hover:underline"></a>
         </div>
+
         <div className="flex flex-row items-center justify-center space-x-2 mb-1">
 
-                <div className="relative flex items-center justify-center" onClick={copyEmailToClipboard}>
-                <AiOutlineMail
-                  className={`hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100 ${isCopied ? 'text-green-500' : ''}`}
-                  size={30}
-                />
-                {isCopied && (
-                  <div className="flex items-center ml-2">
-                    <AiOutlineCheck
-                      className="text-green-500"
-                      size={24}
-                    />
-                    <span className="text-green-500 text-sm ml-1">Copied!</span>
-                  </div>
-                )}
+          <div className="relative flex items-center justify-center" onClick={copyEmailToClipboard}>
+
+              {/* Download Resume Section */}
+              <div className="flex items-center">
+                <a href="./AndresRes (1).pdf" target="_blank" rel="noopener noreferrer" className="hover:underline text-neutral-500 dark:text-neutral-100 p-3">
+                  My resume
+                </a>
               </div>
 
-      
+
+
+            <AiOutlineMail
+              className={`hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100 ${isCopied ? 'text-green-500' : ''}`}
+              size={30}
+            />
+            {isCopied && (
+              <div className="flex items-center ml-2">
+                <AiOutlineCheck
+                  className="text-green-500"
+                  size={24}
+                />
+                <span className="text-green-500 text-sm ml-1">Copied!</span>
+              </div>
+            )}
+          </div>
+
 
           <a href="https://github.com/andjimenezuf" rel="noreferrer" target="_blank">
             <AiOutlineGithub
@@ -54,24 +63,17 @@ const Footer = () => {
               size={30}
             />
           </a>
-          
 
-          <a
-            href="https://www.linkedin.com/in/andres-jimenez-b2053b249/"
-            rel="noreferrer"
-            target="_blank"
-          >
+          <a href="https://www.linkedin.com/in/andres-jimenez-b2053b249/" rel="noreferrer" target="_blank">
             <AiOutlineLinkedin
               className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
               size={30}
             />
           </a>
-
-          
         </div>
       </div>
     </footer>
   )
 }
 
-export default Footer
+export default Footer;
