@@ -8,17 +8,17 @@ const projects = [
   {
     name: "Investi Track",
     description:
-      "Implemented a stock visualizer using machine learning algorithm called Long Short-Term Memory (LSTM). Planning to redesign the website using React",
-    image: "/iinvestiTrack.png",
-    github: "",
-    // link: "https://thankfulthoughts.io/",
+      "Implemented a stock search and visualizer using Next.js, Next.UI and the AlphaVantage API. Exploring the integration of machine learning for price prediction.",
+    image: "/image.png",
+    github: "https://github.com/andjimenezuf/Investyy",
+    // link: "link to production site",
   },
   {
     name: "Fruit Image Mold Detector",
     description: "Leveraged TensorFlow and a pre-trained ImageNet model to identify mold on fruits with 97% validation accuracy.",
     image: "/moldDetector.png",
     github: "https://github.com/andjimenezuf/MoldFruitDetector",
-    // link: "https://platoio.com/register",
+   // link: "link to production site",
   },
   {
     name: "Musicales Jimenez",
@@ -26,7 +26,7 @@ const projects = [
       "An interactive multi-page music store simulation featuring live shopping cart calculations and inventory management using SQL.",
     image: "/music.png",
     github: "https://github.com/andjimenezuf/Musicales/",
-    /*link: "https://katorfamilyphotos.com/",*/
+    // link: "link to production site",
   },
 ]
 
