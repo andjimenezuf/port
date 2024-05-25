@@ -9,7 +9,7 @@ const projects = [
     name: "Ace Expense",
     description:
       "Streamlined solution for managing personal finances, built using components from Shadcn UI and Drizzle ORM, with a Neon database backed by PostgreSQL and powered by Next.js.",
-    image: "/ace.png",
+    image: "/aceExpense.png",
     github: "https://aceexpense-andres-joses-projects.vercel.app/",
     // link: "link to production site",
   },
