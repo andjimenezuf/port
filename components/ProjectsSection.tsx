@@ -6,10 +6,18 @@ import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
 
 const projects = [
   {
+    name: "Ace Expense",
+    description:
+      "Streamlined solution for managing personal finances, built using components from Shadcn UI and Drizzle ORM, with a Neon database backed by PostgreSQL and powered by Next.js.",
+    image: "/ace.png",
+    github: "https://aceexpense-andres-joses-projects.vercel.app/",
+    // link: "link to production site",
+  },
+  {
     name: "Investi Track",
     description:
       "Implemented a stock search and visualizer using Next.js, Next.UI and the AlphaVantage API. Exploring the integration of machine learning for price prediction.",
-    image: "/image.png",
+    image: "/investi2.png",
     github: "https://github.com/andjimenezuf/Investyy",
     // link: "link to production site",
   },
@@ -71,7 +79,7 @@ const ProjectsSection = () => {
                     </p>
                     <div className="flex flex-row align-bottom space-x-4">
                       <Link href={project.github} target="_blank">
-                        <BsGithub
+                      <BsArrowUpRightSquare
                           size={30}
                           className="hover:-translate-y-1 transition-transform cursor-pointer"
                         />
