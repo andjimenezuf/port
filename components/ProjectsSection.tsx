@@ -18,7 +18,7 @@ const projects = [
     description:
       "Implemented a stock search and visualizer using Next.js, Next.UI and the AlphaVantage API. Exploring the integration of machine learning for price prediction.",
     image: "/investi2.png",
-    github: "https://github.com/andjimenezuf/Investyy",
+    github: "https://investyyv2.vercel.app/",
     // link: "link to production site",
   },
   {
