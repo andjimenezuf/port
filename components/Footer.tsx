@@ -34,7 +34,7 @@ const Footer = () => {
 
               {/* Download Resume Section */}
               <div className="flex items-center">
-                <a href="/Andres_J_2026.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline text-neutral-500 dark:text-neutral-100 p-3">
+                <a href="https://docs.google.com/document/d/1PLacrMADt_W03ZkPmWOQtNJGWaARHmWV-fJYPA-Mtkk/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:underline text-neutral-500 dark:text-neutral-100 p-3">
                   My resume
                 </a>
               </div>
