@@ -6,6 +6,14 @@ import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
 
 const projects = [
   {
+    name: "Currency Convertor",
+    description:
+      "Developed an iOS application using Swift that allows users to convert currencies in real-time. The app integrates with ExchangeRateAPI and the FlagsAPI, supporting multiple currencies for accurate and quick conversions.",
+    image: "/CConvertor.png",
+    github: "https://github.com/andjimenezuf/CConvertor",
+    // link: "link to production site",
+  },
+  {
     name: "Ace Expense",
     description:
       "Streamlined solution for managing personal finances, built using components from Shadcn UI and Drizzle ORM, with a Neon database backed by PostgreSQL and powered by Next.js.",
