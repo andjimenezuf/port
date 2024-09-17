@@ -73,10 +73,10 @@ const AboutSection = () => {
             </p>
             <br />
             <p>
-              I am currenlty a sophmore at the{""}
+              I am currenlty a Junior at the{""}
               <span className="font-bold text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-orange-500 ">{" University of Florida"}</span>.
               majoring in a BS in Computer Science with a Minor in Statistics. Some areas of growing interest include software engineering, artificial intelligence, data
-              science, quantitative finance, and cloud computing
+              science, quantitative finance, and cloud computing.
             </p>
             <br />
             <p>
