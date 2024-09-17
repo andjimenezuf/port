@@ -11,30 +11,30 @@ const projects = [
       "Developed an iOS application using Swift that allows users to convert currencies in real-time. The app integrates with ExchangeRateAPI and the FlagsAPI, supporting multiple currencies for accurate and quick conversions.",
     image: "/CConvertor.png",
     github: "https://github.com/andjimenezuf/CConvertor",
-    // link: "link to production site",
+    // link: 
   },
   {
     name: "Ace Expense",
     description:
       "Streamlined solution for managing personal finances, built using components from Shadcn UI and Drizzle ORM, with a Neon database backed by PostgreSQL and powered by Next.js.",
     image: "/aceExpense.png",
-    github: "https://aceexpense-andres-joses-projects.vercel.app/",
-    // link: "link to production site",
+    link: "https://aceexpense-andres-joses-projects.vercel.app/",
+    // link: """
   },
   {
     name: "Investi Track",
     description:
       "Implemented a stock search and visualizer using Next.js, Next.UI and the AlphaVantage API. Exploring the integration of machine learning for price prediction.",
     image: "/investi2.png",
-    github: "https://investyyv2.vercel.app/",
-    // link: "link to production site",
+    link: "https://investyyv2.vercel.app/",
+    github: "https://github.com/andjimenezuf/Investyy",
   },
   {
     name: "Fruit Image Mold Detector",
     description: "Leveraged TensorFlow and a pre-trained ImageNet model to identify mold on fruits with 97% validation accuracy.",
     image: "/moldDetector.png",
     github: "https://github.com/andjimenezuf/MoldFruitDetector",
-   // link: "link to production site",
+    //link: 
   },
   {
     name: "Musicales Jimenez",
@@ -42,9 +42,10 @@ const projects = [
       "An interactive multi-page music store simulation featuring live shopping cart calculations and inventory management using SQL.",
     image: "/music.png",
     github: "https://github.com/andjimenezuf/Musicales/",
-    // link: "link to production site",
+    link: "https://andjimenezuf.github.io/Musicales/"
   },
 ]
+
 
 const ProjectsSection = () => {
   return (
@@ -59,26 +60,15 @@ const ProjectsSection = () => {
           return (
             <div key={idx}>
               <SlideUp offset="-300px 0px -300px 0px">
-                <div className="flex flex-col  animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
-                  <div className=" md:w-1/2">
-                    {/* <Link href={project.link}>
-                      <Image
-                        src={project.image}
-                        alt=""
-                        width={1000}
-                        height={1000}
-                        className="rounded-xl shadow-xl hover:opacity-70"
-                      />
-                     </Link> */}
-                     
-                      <Image
-                        src={project.image}
-                        alt=""
-                        width={1000}
-                        height={1000}
-                        className="rounded-xl shadow-xl hover:opacity-70"
-                      />
-                     
+                <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
+                  <div className="md:w-1/2">
+                    <Image
+                      src={project.image}
+                      alt=""
+                      width={1000}
+                      height={1000}
+                      className="rounded-xl shadow-xl hover:opacity-70"
+                    />
                   </div>
                   <div className="mt-8 md:w-1/2">
                     <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
@@ -86,18 +76,22 @@ const ProjectsSection = () => {
                       {project.description}
                     </p>
                     <div className="flex flex-row align-bottom space-x-4">
-                      <Link href={project.github} target="_blank">
-                      <BsArrowUpRightSquare
-                          size={30}
-                          className="hover:-translate-y-1 transition-transform cursor-pointer"
-                        />
-                      </Link>
-                      {/* <Link href={project.link} target="_blank">
-                        <BsArrowUpRightSquare
-                          size={30}
-                          className="hover:-translate-y-1 transition-transform cursor-pointer"
-                        />
-                      </Link> */}
+                      {project.github && (
+                        <Link href={project.github} target="_blank">
+                          <BsGithub
+                            size={30}
+                            className="hover:-translate-y-1 transition-transform cursor-pointer"
+                          />
+                        </Link>
+                      )}
+                      {project.link && (
+                        <Link href={project.link} target="_blank">
+                          <BsArrowUpRightSquare
+                            size={30}
+                            className="hover:-translate-y-1 transition-transform cursor-pointer"
+                          />
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -105,10 +99,10 @@ const ProjectsSection = () => {
             </div>
           )
         })}
-        
       </div>
     </section>
   )
 }
+
 
 export default ProjectsSection
