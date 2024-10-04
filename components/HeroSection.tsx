@@ -28,15 +28,16 @@ const HeroSection = () => {
               style={{
                 top: '100px', // 50 pixels from the top of the container
                 left: '100px', // 50 pixels from the left of the container
+                width: '200px',
+                height: '200px',
+                borderRadius: '50%', // Rounded corners
+                backgroundImage: 'url(/IMG_H2.svg)', // SVG as background image
+                backgroundSize: 'cover', // Makes sure the image fills the div
+                backgroundPosition: 'center',
+                boxShadow: '0 10px 15px rgba(0, 0, 0, 0.5)' // Equivalent to shadow-2xl
               }}
             >
-              <Image
-                src="/headshot.jpg"
-                alt="Headshot"
-                width={200}
-                height={200}
-                className="rounded-full shadow-2xl"
-              />
+              {/* No <Image> component */}
             </div>
           </div>
 
