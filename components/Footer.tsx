@@ -34,7 +34,7 @@ const Footer = () => {
 
               {/* Download Resume Section */}
               <div className="flex items-center">
-                <a href="https://docs.google.com/document/d/1PLacrMADt_W03ZkPmWOQtNJGWaARHmWV-fJYPA-Mtkk/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:underline text-neutral-500 dark:text-neutral-100 p-3">
+                <a href="https://docs.google.com/document/d/1tHVq8cFrq3pe1RYa1d7lS9_mZMEEj-CNAqsVM36JQUw/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:underline text-neutral-500 dark:text-neutral-100 p-3">
                   My resume
                 </a>
               </div>
@@ -64,7 +64,7 @@ const Footer = () => {
             />
           </a>
 
-          <a href="https://www.linkedin.com/in/andres-jimenez-b2053b249/" rel="noreferrer" target="_blank">
+          <a href="https://www.linkedin.com/in/andresjj/" rel="noreferrer" target="_blank">
             <AiOutlineLinkedin
               className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
               size={30}
