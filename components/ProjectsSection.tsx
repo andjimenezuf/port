@@ -17,7 +17,7 @@ const projects = [
     name: "Ace Expense",
     description:
       "Streamlined solution for managing personal finances, built using components from Shadcn UI and Drizzle ORM, with a Neon database backed by PostgreSQL and powered by Next.js.",
-    image: "/aceExpense.png",
+    image: "/aceExpense.jpeg",
     link: "https://aceexpense-andres-joses-projects.vercel.app/",
     // link: """
   },
@@ -46,7 +46,6 @@ const projects = [
   },
 ]
 
-
 const ProjectsSection = () => {
   return (
     <section id="projects">
@@ -55,13 +54,13 @@ const ProjectsSection = () => {
         <hr className="w-6 h-1 mx-auto my-4 bg-purple-400 border-0 rounded"></hr>
       </h1>
 
-      <div className="flex flex-col space-y-28">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project, idx) => {
           return (
             <div key={idx}>
               <SlideUp offset="-300px 0px -300px 0px">
-                <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
-                  <div className="md:w-1/2">
+                <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2">
+                  <div className="mb-4">
                     <Image
                       src={project.image}
                       alt=""
@@ -70,7 +69,7 @@ const ProjectsSection = () => {
                       className="rounded-xl shadow-xl hover:opacity-70"
                     />
                   </div>
-                  <div className="mt-8 md:w-1/2">
+                  <div>
                     <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
                     <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
                       {project.description}
@@ -103,6 +102,5 @@ const ProjectsSection = () => {
     </section>
   )
 }
-
 
 export default ProjectsSection

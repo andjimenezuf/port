@@ -53,20 +53,55 @@ const HeroSection = () => {
             </span>
             based in Gainseville, FL. Working towards cultivating and learning new skills. 
           </p>
-          <Link
-            to="projects"
-            className="text-neutral-100 font-semibold px-6 py-3 bg-gradient-to-br from-blue-400 to-purple-600 rounded shadow"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-          >
-            Projects
-          </Link>
+          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+            <Link
+              to="about"
+              className="text-neutral-100 font-semibold px-6 py-3 bg-gradient-to-br from-blue-400 to-purple-600 rounded shadow hover:opacity-80 transition-opacity cursor-pointer"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              About Me
+            </Link>
+            <Link
+              to="experience"
+              className="text-neutral-100 font-semibold px-6 py-3 bg-gradient-to-br from-purple-600 to-pink-600 rounded shadow hover:opacity-80 transition-opacity cursor-pointer"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              Experience
+            </Link>
+            <Link
+              to="projects"
+              className="text-neutral-100 font-semibold px-6 py-3 bg-gradient-to-br from-pink-600 to-red-600 rounded shadow hover:opacity-80 transition-opacity cursor-pointer"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              Projects
+            </Link>
+            <Link
+              to="awards"
+              className="text-neutral-100 font-semibold px-6 py-3 bg-gradient-to-br from-red-600 to-orange-600 rounded shadow hover:opacity-80 transition-opacity cursor-pointer"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              Awards
+            </Link>
+          </div>
         </div>
       </div>
-      <div className="flex flex-row items-center text-center justify-center ">
+      <div className="flex flex-row items-center text-center justify-center">
         <Link
           to="about"
           activeClass="active"
@@ -75,7 +110,7 @@ const HeroSection = () => {
           offset={-100}
           duration={500}
         >
-          <HiArrowDown size={35} className="animate-bounce" />
+          <HiArrowDown size={35} className="animate-bounce cursor-pointer" />
         </Link>
       </div>
     </section>

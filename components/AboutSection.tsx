@@ -2,13 +2,15 @@ import React from "react"
 import Image from "next/image"
 
 const skills = [
-  { skill: "Python (pandas, Matplotlib, scikit-learn, Pytorch)" },
+  { skill: "Python (TensorFlow, PyTorch, OpenCV)" },
+  { skill: "Machine Learning" },
+  { skill: "Computer Vision" },
+  { skill: "Deep Learning" },
   { skill: "C++" },
   { skill: "Java" },
-  { skill: "HTML/CSS" },
-  { skill: "JavaScript" },
   { skill: "TypeScript" },
   { skill: "React" },
+  { skill: "Next.js" },
   { skill: "Tailwind CSS" },
   { skill: "Git" },
   { skill: "SQL" },
@@ -68,33 +70,22 @@ const AboutSection = () => {
               <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-purple-600">{"First-Generation Student"}</span>,
               <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-purple-600">{" highly ambitious"}</span>,
               <span className="font-bold  text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-purple-600">{" self-motivated"}</span>, and
-              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-purple-600">{" driven"}</span>.
-               Seeking mentorship opportunities where I can apply and expand my technical skills and cultivate a continuous learning environment. 
+              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-purple-600">{" driven"}</span>{" "}
+              Computer Science student with interests in Some areas of growing interest include software engineering, machine learning, data science, quantitative finance, and cloud computing.
             </p>
             <br />
             <p>
-              I am currenlty a Junior at the{""}
+              I am currently a Junior at the{""}
               <span className="font-bold text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-orange-500 ">{" University of Florida"}</span>
-              majoring in a BS in Computer Science with a Minor in Statistics. Some areas of growing interest include software engineering, machine learning, data
-              science, quantitative finance, and cloud computing.
+              {" "}majoring in Computer Science with a Minor in Statistics. I am also doing an international internship in AI in Tokyo to further enhance my skills in this field.
             </p>
             <br />
             <p>
-              I have a wide range of hobbies and passions.
-              From music, to cycling,
-              I am always seeking new experiences and love to keep myself
-              engaged and {""}
-              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-emerald-500 ">{"learning"}</span> new things.
-            </p>
-            <br />
-            <p>
-              I believe that one should{" "}
+              I believe in the power of{" "}
               <span className="font-bold bg-gradient-to-r from-yellow-400 to-amber-300 bg-clip-text text-transparent">
-                never stop growing
+                continuous learning
               </span>{" "}
-              and that&#39;s what I strive to do, I have desire to engage with mentors so that can push the limits of what is
-              possible. I am excited to see where my career takes me and am
-              always open to new opportunities. 🙂
+              and am always seeking opportunities to expand my knowledge and skills. Whether it's through academic research, personal projects, or professional experiences, I'm committed to pushing the boundaries of what's possible.  I am excited to see where my career takes me and am always open to new opportunities. 🙂
             </p>
           </div>
           <div className="text-center md:w-1/2 md:text-left">
@@ -112,27 +103,22 @@ const AboutSection = () => {
               })}
             </div>
 
-
-              <div className="text-center md:text-left">
-                <br></br>
-                <h1 className="text-2xl font-bold mb-6">My Certifications</h1>
-                <div className="flex flex-wrap justify-center md:justify-start">
-                  {certifications.map((cert, idx) => (
-                    <div key={idx} className="m-2 flex bg-gray-200  text-gray-500 rounded font-semibold">
-                      <div className="svg-container flex items-center justify-center p-2">
-                        {cert.svg}
-                      </div>
-                      <div className="flex items-center p-2">
-                        {cert.name}
-                      </div>
+            <div className="text-center md:text-left">
+              <br></br>
+              <h1 className="text-2xl font-bold mb-6">My Certifications</h1>
+              <div className="flex flex-wrap justify-center md:justify-start">
+                {certifications.map((cert, idx) => (
+                  <div key={idx} className="m-2 flex bg-gray-200  text-gray-500 rounded font-semibold">
+                    <div className="svg-container flex items-center justify-center p-2">
+                      {cert.svg}
                     </div>
-                  ))}
-                </div>
+                    <div className="flex items-center p-2">
+                      {cert.name}
+                    </div>
+                  </div>
+                ))}
               </div>
-
-
-
-
+            </div>
           </div>
         </div>
       </div>
