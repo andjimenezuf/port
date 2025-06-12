@@ -1,0 +1,48 @@
+// components/ExperienceSection.tsx
+import React from "react";
+import Image from "next/image";
+
+const experiences = [
+  {
+    title: "Software Engineer Intern",
+    company: "JPMorgan Chase & Co.",
+    duration: "June 2025 - August 2025",
+    description: "Developing web applications using React and Node.js.",
+    logo: "/jpmorganchase_logo.jpeg",
+  },
+  {
+    title: "AI Software Engineer Intern",
+    company: "Advantech",
+    duration: "February 2025 - May 2025",
+    description: "Developed applications using LLMs to help the company's AI team.",
+    logo: "/advantech_logo.jpeg",
+  }
+  // Add more experience items as needed
+];
+
+const ExperienceSection = () => {
+  return (
+    <section id="experience" className="my-10">
+      <h1 className="text-center font-bold text-4xl mb-6">Experience</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {experiences.map((experience, idx) => (
+          <div key={idx} className="flex flex-col p-4 border rounded-lg shadow-md">
+            <Image
+              src={experience.logo}
+              alt={`${experience.company} logo`}
+              width={100}
+              height={100}
+              className="mb-2"
+            />
+            <h2 className="text-2xl font-semibold">{experience.title}</h2>
+            <h3 className="text-xl text-gray-600">{experience.company}</h3>
+            <p className="text-sm text-gray-500">{experience.duration}</p>
+            <p className="mt-2">{experience.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default ExperienceSection;

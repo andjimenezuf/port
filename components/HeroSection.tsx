@@ -51,7 +51,7 @@ const HeroSection = () => {
             <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-purple-600">
               Aspiring Engineer{" "}
             </span>
-            based in Gainseville, FL. Working towards cultivating and learning new skills. 
+            based in Miami, FL. Working towards cultivating and learning new skills. 
           </p>
           <Link
             to="projects"

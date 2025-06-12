@@ -1,19 +1,30 @@
 import React from "react"
 import Image from "next/image"
 
-const skills = [
-  { skill: "Python (pandas, Matplotlib, scikit-learn, Pytorch)" },
+const programmingLanguages = [
+  { skill: "Python" },
+  { skill: "JavaScript" },
+  { skill: "TypeScript" },
   { skill: "C++" },
   { skill: "Java" },
   { skill: "HTML/CSS" },
-  { skill: "JavaScript" },
-  { skill: "TypeScript" },
-  { skill: "React" },
-  { skill: "Tailwind CSS" },
-  { skill: "Git" },
-  { skill: "SQL" },
+  { skill: "Swift" },
   { skill: "R" },
 ]
+
+const frameworksAndTools = [
+  { tool: "React.js" },
+  { tool: "Next.js" },
+  { tool: "Tailwind CSS" },
+  { tool: "Pytorch" },
+  { tool: "OpenCV" },
+  { tool: "TensorFlow" },
+  { tool: "TensorRT" },
+  { tool: "Retreival Augmented Generation (RAG)" },
+  { tool: "Large Language Models (LLMs)" },
+  { tool: "Ollama" },
+  { tool: "Docker" },
+];
 
 const certifications = [
   { name: "AWS Cloud Practitioner", svg: (<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 48 48">
@@ -74,7 +85,7 @@ const AboutSection = () => {
             <br />
             <p>
               I am currenlty a Junior at the{""}
-              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-orange-500 ">{" University of Florida"}</span>
+              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-orange-500 ">{" University of Florida "}</span>
               majoring in a BS in Computer Science with a Minor in Statistics. Some areas of growing interest include software engineering, machine learning, data
               science, quantitative finance, and cloud computing.
             </p>
@@ -83,8 +94,7 @@ const AboutSection = () => {
               I have a wide range of hobbies and passions.
               From music, to cycling,
               I am always seeking new experiences and love to keep myself
-              engaged and {""}
-              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-emerald-500 ">{"learning"}</span> new things.
+              engaged and learning new things.
             </p>
             <br />
             <p>
@@ -100,7 +110,7 @@ const AboutSection = () => {
           <div className="text-center md:w-1/2 md:text-left">
             <h1 className="text-2xl font-bold mb-6">My Skills</h1>
             <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
-              {skills.map((item, idx) => {
+              {programmingLanguages.map((item, idx) => {
                 return (
                   <p
                     key={idx}
@@ -112,27 +122,34 @@ const AboutSection = () => {
               })}
             </div>
 
-
-              <div className="text-center md:text-left">
-                <br></br>
-                <h1 className="text-2xl font-bold mb-6">My Certifications</h1>
-                <div className="flex flex-wrap justify-center md:justify-start">
-                  {certifications.map((cert, idx) => (
-                    <div key={idx} className="m-2 flex bg-gray-200  text-gray-500 rounded font-semibold">
-                      <div className="svg-container flex items-center justify-center p-2">
-                        {cert.svg}
-                      </div>
-                      <div className="flex items-center p-2">
-                        {cert.name}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+            <div className="text-center md:text-left">
+              <br />
+              <h1 className="text-2xl font-bold mb-6">Frameworks and Tools</h1>
+              <div className="flex flex-wrap justify-center md:justify-start">
+                {frameworksAndTools.map((item, idx) => (
+                  <p key={idx} className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold">
+                    {item.tool}
+                  </p>
+                ))}
               </div>
+            </div>
 
-
-
-
+            <div className="text-center md:text-left">
+              <br />
+              <h1 className="text-2xl font-bold mb-6">My Certifications</h1>
+              <div className="flex flex-wrap justify-center md:justify-start">
+                {certifications.map((cert, idx) => (
+                  <div key={idx} className="m-2 flex bg-gray-200 text-gray-500 rounded font-semibold">
+                    <div className="svg-container flex items-center justify-center p-2">
+                      {cert.svg}
+                    </div>
+                    <div className="flex items-center p-2">
+                      {cert.name}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
