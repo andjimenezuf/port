@@ -17,16 +17,17 @@ const experiences = [
     description: "Developed applications using LLMs to help the company's AI team.",
     logo: "/advantech_logo.jpeg",
   }
-  // Add more experience items as needed
+  // Add more experience items as needed ToDo: Add more experience items
 ];
 
 const ExperienceSection = () => {
   return (
     <section id="experience" className="my-10">
       <h1 className="text-center font-bold text-4xl mb-6">Experience</h1>
+      <hr className="w-6 h-1 mx-auto my-4 bg-blue-900 border-0 rounded"></hr>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {experiences.map((experience, idx) => (
-          <div key={idx} className="flex flex-col p-4 border rounded-lg shadow-md">
+          <div key={idx} className="flex flex-col p-4  rounded-lg shadow-md bg-white dark:bg-gray-800">
             <Image
               src={experience.logo}
               alt={`${experience.company} logo`}
@@ -44,5 +45,6 @@ const ExperienceSection = () => {
     </section>
   );
 };
+
 
 export default ExperienceSection;

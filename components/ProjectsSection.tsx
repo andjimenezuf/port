@@ -17,7 +17,7 @@ const projects = [
     name: "Ace Expense",
     description:
       "Streamlined solution for managing personal finances, built using components from Shadcn UI and Drizzle ORM, with a Neon database backed by PostgreSQL and powered by Next.js.",
-    image: "/aceExpense.png",
+    image: "/aceExpense.jpeg",
     link: "https://aceexpense-andres-joses-projects.vercel.app/",
     // link: """
   },
@@ -46,7 +46,6 @@ const projects = [
   },
 ]
 
-
 const ProjectsSection = () => {
   return (
     <section id="projects">
@@ -74,30 +73,29 @@ const ProjectsSection = () => {
                       className="rounded-xl shadow-xl hover:opacity-70"
                     />
                   </div>
-                  
-                  {/* Project Description */}
-                  <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
-                    {project.description}
-                  </p>
-                  
-                  {/* Link Icons */}
-                  <div className="flex flex-row align-bottom space-x-4">
-                    {project.github && (
-                      <Link href={project.github} target="_blank">
-                        <BsGithub
-                          size={30}
-                          className="hover:-translate-y-1 transition-transform cursor-pointer"
-                        />
-                      </Link>
-                    )}
-                    {project.link && (
-                      <Link href={project.link} target="_blank">
-                        <BsArrowUpRightSquare
-                          size={30}
-                          className="hover:-translate-y-1 transition-transform cursor-pointer"
-                        />
-                      </Link>
-                    )}
+                  <div className="mt-8 md:w-1/2">
+                    <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
+                    <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-row align-bottom space-x-4">
+                      {project.github && (
+                        <Link href={project.github} target="_blank">
+                          <BsGithub
+                            size={30}
+                            className="hover:-translate-y-1 transition-transform cursor-pointer"
+                          />
+                        </Link>
+                      )}
+                      {project.link && (
+                        <Link href={project.link} target="_blank">
+                          <BsArrowUpRightSquare
+                            size={30}
+                            className="hover:-translate-y-1 transition-transform cursor-pointer"
+                          />
+                        </Link>
+                      )}
+                    </div>
                   </div>
                 </div>
               </SlideUp>
@@ -108,6 +106,5 @@ const ProjectsSection = () => {
     </section>
   )
 }
-
 
 export default ProjectsSection

@@ -16,7 +16,7 @@ export default function RootLayout({
         head.tsx.
       */}
       <head />
-      <body className="dark:bg-stone-900">
+      <body className="dark:bg-stone-950">
         <ThemeProvider enableSystem={true} attribute="class">
           <Navbar />
           {children}
