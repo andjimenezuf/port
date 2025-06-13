@@ -103,13 +103,13 @@ const AboutSection = () => {
               <span className="font-bold text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-emerald-500 ">{"learning"}</span> new things.
             </p>
             <br />
-            <p>
-              I believe that one should{" "}
+            <p> I believe that one should{" "}
               <span className="font-bold bg-gradient-to-r from-yellow-400 to-amber-300 bg-clip-text text-transparent">
                 continuous learning
               </span>{" "}
-              and am always seeking opportunities to expand my knowledge and skills. Whether it's through academic research, personal projects, or professional experiences, I&apos;m excited to see where my career takes me..  I am excited to see where my career takes me and am always open to new opportunities. 🙂
+              and am always seeking opportunities to expand my knowledge and skills. Whether it&apos;s through academic research, personal projects, or professional experiences, I&apos;m excited to see where my career takes me and am always open to new opportunities. 🙂
             </p>
+
           </div>
           <div className="text-center md:w-1/2 md:text-left">
             <h1 className="text-2xl font-bold mb-6">My Skills</h1>
