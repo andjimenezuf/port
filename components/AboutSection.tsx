@@ -80,34 +80,18 @@ const AboutSection = () => {
               Get to know me!
             </h1>
             <p>
-              Hello, my name is Andres and I am a{" "}
-              <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-br from-blue-900 to-blue-700">{"First-Generation Student"}</span>,
-              <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-br from-blue-900 to-blue-700">{" highly ambitious"}</span>,
-              <span className="font-bold  text-transparent bg-clip-text bg-gradient-to-br from-blue-900 to-blue-700">{" self-motivated"}</span>, and
-              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-br from-blue-900 to-blue-700">{" driven"}</span>{" "}
-              Computer Science student with interests in Some areas of growing interest include software engineering, machine learning, data science, quantitative finance, and cloud computing.
+              {`Hello, my name is Andres. I’m a first-generation student currently pursuing a B.S. in Computer Science with a Minor in Statistics at the University of Florida.`}
             </p>
             <br />
             <p>
-              I am currenlty a Junior at the{""}
-              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-orange-500 ">{" University of Florida"}</span>
-              majoring in a BS in Computer Science with a Minor in Statistics. Some areas of growing interest include software engineering, machine learning, data
-              science, quantitative finance, and cloud computing.
+              {`I have a strong and growing interest in software engineering, machine learning, data science, quantitative finance, and cloud computing. 
+              I’m always seeking ways to expand my skills in these areas through hands-on projects and learning opportunities.`}
             </p>
             <br />
             <p>
-              I have a wide range of hobbies and passions.
-              From music, to cycling,
-              I am always seeking new experiences and love to keep myself
-              engaged and {""}
-              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-emerald-500 ">{"learning"}</span> new things.
-            </p>
-            <br />
-            <p> I believe that one should{" "}
-              <span className="font-bold bg-gradient-to-r from-yellow-400 to-amber-300 bg-clip-text text-transparent">
-                continuous learning
-              </span>{" "}
-              and am always seeking opportunities to expand my knowledge and skills. Whether it&apos;s through academic research, personal projects, or professional experiences, I&apos;m excited to see where my career takes me and am always open to new opportunities. 🙂
+            {`Beyond the classroom, I enjoy exploring new experiences through hobbies like music and cycling. 
+            I’m always eager to keep learning, growing, and staying engaged in both technical and creative pursuits
+            and I look forward to new opportunities that challenge and inspire me. 🐊`}
             </p>
 
           </div>

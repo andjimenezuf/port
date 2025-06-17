@@ -7,14 +7,14 @@ const experiences = [
     title: "Software Engineer Intern",
     company: "JPMorgan Chase & Co.",
     duration: "June 2025 - August 2025",
-    description: "Developing web applications using React and Node.js.",
+    description: "Integrating transformer-based sentiment analysis and LangChain APIs ",
     logo: "/jpmorganchase_logo.jpeg",
   },
   {
     title: "AI Software Engineer Intern",
     company: "Advantech",
     duration: "February 2025 - May 2025",
-    description: "Developed applications using LLMs to help the company's AI team.",
+    description: "Built a real-time computer vision system using NVIDIA frameworks and architected a multilingual AI assistant pipeline, which was showcased in a tech demo at Japan IT Week.",
     logo: "/advantech_logo.jpeg",
   }
   // Add more experience items as needed ToDo: Add more experience items
@@ -27,7 +27,7 @@ const ExperienceSection = () => {
       <hr className="w-6 h-1 mx-auto my-4 bg-blue-900 border-0 rounded"></hr>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {experiences.map((experience, idx) => (
-          <div key={idx} className="flex flex-col p-4  rounded-lg shadow-md bg-white dark:bg-gray-800">
+          <div key={idx} className="flex flex-col p-4 rounded-lg shadow-md bg-white dark:bg-gray-800">
             <Image
               src={experience.logo}
               alt={`${experience.company} logo`}
