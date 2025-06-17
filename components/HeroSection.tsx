@@ -47,11 +47,7 @@ const HeroSection = () => {
         <div className="md:mt-2 md:w-3/5">
           <h1 className="text-4xl font-bold mt-6 md:mt-0 md:text-7xl">Hello, I&#39;m Andres!</h1>
           <p className="text-lg mt-4 mb-6 md:text-2xl">
-            I&#39;m an{" "}
-            <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-br from-blue-900 to-blue-600">
-              Aspiring Engineer{" "}
-            </span>
-            based in Miami, FL. Working towards cultivating and learning new skills. 
+            {`I'm an aspiring software engineer from Miami-Dade, FL. Working towards cultivating and learning new skills. `}
           </p>
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
             <Link
