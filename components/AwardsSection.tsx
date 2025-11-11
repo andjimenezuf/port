@@ -23,7 +23,7 @@ const awards = [
     organization: "University of Florida",
     year: "2022",
     description: "Awarded the prestigious Machen Florida Opportunity Scholarship, supporting first-generation students at the University of Florida.",
-    logo: "/MFOSLogo.png",
+    logo: "/MFOSLOgo.png",
   },
   {
     title: "MLT Career Prep Scholar",
