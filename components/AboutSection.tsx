@@ -1,5 +1,5 @@
 import React from "react"
-import Image from "next/image"
+import GlassCard from "@/components/glass/GlassCard"
 
 const programmingLanguages = [
   { skill: "Python" },
@@ -7,29 +7,28 @@ const programmingLanguages = [
   { skill: "TypeScript" },
   { skill: "C++" },
   { skill: "Java" },
-  { skill: "HTML/CSS" },
-  { skill: "JavaScript" },
-  { skill: "TypeScript" },
-  { skill: "React" },
-  { skill: "Tailwind CSS" },
-  { skill: "Git" },
+  { skill: "Swift" },
+  { skill: "HTML" },
+  { skill: "CSS" },
   { skill: "SQL" },
   { skill: "R" },
 ]
 
 const frameworksAndTools = [
-  { tool: "React.js" },
+  { tool: "React" },
   { tool: "Next.js" },
-  { tool: "Tailwind CSS" },
-  { tool: "Pytorch" },
-  { tool: "OpenCV" },
+  { tool: "FastAPI" },
+  { tool: "Node.js" },
+  { tool: "Postman" },
+  { tool: "LangGraph" },
+  { tool: "PyTorch" },
   { tool: "TensorFlow" },
   { tool: "TensorRT" },
-  { tool: "Retreival Augmented Generation (RAG)" },
-  { tool: "Large Language Models (LLMs)" },
   { tool: "Ollama" },
+  { tool: "LLMs" },
+  { tool: "AWS (ECS, E2, S3)" },
   { tool: "Docker" },
-];
+]
 
 const certifications = [
   { name: "AWS Cloud Practitioner", svg: (<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 48 48">
@@ -75,62 +74,99 @@ const AboutSection = () => {
         </h1>
 
         <div className="flex flex-col space-y-10 items-stretch justify-center align-top md:space-x-10 md:space-y-0 md:p-4 md:flex-row md:text-left">
-          <div className="md:w-1/2 ">
-            <h1 className="text-center text-2xl font-bold mb-6 md:text-left">
-              Get to know me!
-            </h1>
-            <p>
-              {`Hello, my name is Andres. I’m a first-generation student currently pursuing a B.S. in Computer Science with a Minor in Statistics at the University of Florida.`}
-            </p>
-            <br />
-            <p>
-              {`I have a strong and growing interest in software engineering, machine learning, data science, quantitative finance, and cloud computing. 
-              I’m always seeking ways to expand my skills in these areas through hands-on projects and learning opportunities.`}
-            </p>
-            <br />
-            <p>
-            {`Beyond the classroom, I enjoy exploring new experiences through hobbies like music and cycling. 
-            I’m always eager to keep learning, growing, and staying engaged in both technical and creative pursuits
-            and I look forward to new opportunities that challenge and inspire me. 🐊`}
-            </p>
-
+          <div className="md:w-1/2">
+            <GlassCard
+              variant="subtle"
+              intensity="light"
+              interactive={false}
+              useAdvancedEffects={false}
+              mouseTracking={false}
+              className="text-base-content"
+            >
+              <div className="p-6 space-y-4">
+                <h1 className="text-center text-2xl font-bold md:text-left">Get to know me!</h1>
+                <p>
+                  {`Hello, my name is Andres. I’m a first-generation student currently pursuing a B.S. in Computer Science with a Minor in Statistics at the University of Florida.`}
+                </p>
+                <p>
+                  {`I have a strong and growing interest in software engineering, machine learning, data science, quantitative finance, and cloud computing. 
+                  I’m always seeking ways to expand my skills in these areas through hands-on projects and learning opportunities.`}
+                </p>
+                <p>
+                  {`Beyond the classroom, I enjoy exploring new experiences through hobbies like music and cycling. 
+                  I’m always eager to keep learning, growing, and staying engaged in both technical and creative pursuits
+                  and I look forward to new opportunities that challenge and inspire me. 🐊`}
+                </p>
+              </div>
+            </GlassCard>
           </div>
-          <div className="text-center md:w-1/2 md:text-left">
-            <h1 className="text-2xl font-bold mb-6">My Skills</h1>
-            <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
-              {programmingLanguages.map((item, idx) => {
-                return (
-                  <p
-                    key={idx}
-                    className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold"
-                  >
-                    {item.skill}
-                  </p>
-                )
-              })}
-            </div>
-
-
-              <div className="text-center md:text-left">
-                <br></br>
-                <h1 className="text-2xl font-bold mb-6">My Certifications</h1>
-                <div className="flex flex-wrap justify-center md:justify-start">
-                  {certifications.map((cert, idx) => (
-                    <div key={idx} className="m-2 flex bg-gray-200  text-gray-500 rounded font-semibold">
-                      <div className="svg-container flex items-center justify-center p-2">
-                        {cert.svg}
-                      </div>
-                      <div className="flex items-center p-2">
-                        {cert.name}
-                      </div>
-                    </div>
-                  ))}
+          <div className="text-center md:w-1/2 md:text-left space-y-6">
+            <h1 className="text-2xl font-bold">My Skills</h1>
+            <GlassCard
+              variant="intense"
+              intensity="strong"
+              interactive
+              useAdvancedEffects={true}
+              mouseTracking={true}
+              className="text-base-content"
+            >
+              <div className="p-6 space-y-6">
+                <div className="space-y-3 border border-white/10 rounded-xl p-4 bg-base-300/40">
+                  <h2 className="text-lg font-semibold">Programming Languages</h2>
+                  <div className="flex flex-wrap gap-2">
+                    {programmingLanguages.map((item, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1 rounded-full border border-white/10 bg-base-100/50 text-sm"
+                      >
+                        {item.skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="space-y-3 border border-white/10 rounded-xl p-4 bg-base-300/40">
+                  <h2 className="text-lg font-semibold">Frameworks & Tools</h2>
+                  <div className="flex flex-wrap gap-2">
+                    {frameworksAndTools.map((item, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1 rounded-full border border-white/10 bg-base-100/50 text-sm"
+                      >
+                        {item.tool}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
+            </GlassCard>
+          </div>
+        </div>
 
-
-
-
+        <div className="mt-12">
+          <h1 className="text-center md:text-left text-2xl font-bold mb-6">My Certifications</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {certifications.map((cert, idx) => (
+              <GlassCard
+                key={idx}
+                variant="intense"
+                intensity="strong"
+                interactive
+                useAdvancedEffects={true}
+                mouseTracking={true}
+                className="text-base-content"
+              >
+                <div className="flex items-center justify-between p-4">
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-base-100/70 border border-white/10">
+                      <div className="flex items-center justify-center w-12 h-12 rounded-md bg-white shadow-inner">
+                        {cert.svg}
+                      </div>
+                    </div>
+                    <p className="font-semibold text-sm md:text-base">{cert.name}</p>
+                  </div>
+                </div>
+              </GlassCard>
+            ))}
           </div>
         </div>
       </div>

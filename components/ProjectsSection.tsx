@@ -6,6 +6,27 @@ import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
 
 const projects = [
   {
+    name: "FairFlow – HackPrinceton",
+    description:
+      "Built a community micro-lending platform that explains credit risk via AI clarity scores and public accountability, integrating Grok AI to analyze 200+ transactions and generate merchant-specific credit narratives.",
+    timeline: "November 2025",
+    tags: ["FastAPI", "React", "xAI API", "Kotlin", "Winner – Use of Vibe Kanban"],
+  },
+  {
+    name: "Sherpa – HackHarvard",
+    description:
+      "Improved web accessibility for 100+ visually-impaired users by automating Gemini-based summaries of complex webpages, cutting DOM analysis latency from 10s to 4.8s with async streaming.",
+    timeline: "October 2025",
+    tags: ["JavaScript", "FastAPI", "HTML", "CSS", "Google APIs"],
+  },
+  {
+    name: "EduAdvisor – Personal Project",
+    description:
+      "Built an AI advisor that analyzes 5+ majors and 100+ prerequisite courses, generating personalized pipelines and GPT-based insights for MongoDB-backed agent tools.",
+    timeline: "September 2025",
+    tags: ["React", "TypeScript", "FastAPI", "MongoDB", "Google ADK"],
+  },
+  {
     name: "Currency Convertor",
     description:
       "Developed an iOS application using Swift that allows users to convert currencies in real-time. The app integrates with ExchangeRateAPI and the FlagsAPI, supporting multiple currencies for accurate and quick conversions.",
@@ -54,31 +75,48 @@ const ProjectsSection = () => {
         <hr className="w-6 h-1 mx-auto my-4 bg-purple-400 border-0 rounded"></hr>
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {projects.map((project, idx) => {
           return (
-            <div key={idx} className="flex flex-col">
+            <div key={idx} className="flex flex-col h-full">
               <SlideUp offset="-300px 0px -300px 0px">
-                <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2">
-                  {/* Project Name */}
-                  <h1 className="text-4xl font-bold mb-2">{project.name}</h1>
-                  
-                  {/* Project Image */}
-                  <div className="md:w-full">
-                    <Image
-                      src={project.image}
-                      alt={project.name}
-                      width={1000}
-                      height={1000}
-                      className="rounded-xl shadow-xl hover:opacity-70"
-                    />
+                <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 gap-6 h-full">
+                  <div className="w-full">
+                    {project.image ? (
+                      <Image
+                        src={project.image}
+                        alt={project.name}
+                        width={1000}
+                        height={1000}
+                        className="rounded-xl shadow-xl hover:opacity-70"
+                      />
+                    ) : (
+                      <div className="rounded-xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6 text-base-content/80 min-h-[220px] flex items-center justify-center text-center">
+                        <div>
+                          <p className="font-semibold">Visual coming soon</p>
+                          <p className="text-sm">{project.name}</p>
+                        </div>
+                      </div>
+                    )}
                   </div>
-                  <div className="mt-8 md:w-1/2">
-                    <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
-                    <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
+                  <div className="w-full flex flex-col flex-1">
+                    <h2 className="text-3xl font-bold mb-4">{project.name}</h2>
+                    {project.timeline && (
+                      <p className="text-sm text-base-content/60 mb-2">{project.timeline}</p>
+                    )}
+                    <p className="text-base md:text-lg leading-relaxed mb-4 text-white/80">
                       {project.description}
                     </p>
-                    <div className="flex flex-row align-bottom space-x-4">
+                    {project.tags && (
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.tags.map((tag) => (
+                          <span key={tag} className="px-3 py-1 text-xs rounded-full border border-white/10 bg-base-100/30">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    <div className="flex flex-row align-bottom space-x-4 mt-auto">
                       {project.github && (
                         <Link href={project.github} target="_blank">
                           <BsGithub

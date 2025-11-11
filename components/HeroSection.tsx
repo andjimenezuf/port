@@ -3,9 +3,11 @@ import React from "react"
 import Image from "next/image"
 import { Link } from "react-scroll/modules"
 import { HiArrowDown } from "react-icons/hi"
+import GlassButton from "@/components/glass/GlassButton"
 
 const HeroSection = () => {
-  const svgBackgroundPath = '/ccchaos.svg'
+  const buttonWidth = "min-w-[120px]"
+  const linkClasses = "block w-full text-center text-sm font-semibold tracking-wide"
 
   return (
     <section id="home">
@@ -14,10 +16,6 @@ const HeroSection = () => {
             <div 
             className="md:mt-2 md:w-1/2 relative" 
             style={{ 
-              backgroundImage: `url(${svgBackgroundPath})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-              backgroundSize: 'cover',
               width: '400px', 
               height: '400px', 
             }}
@@ -49,51 +47,59 @@ const HeroSection = () => {
           <p className="text-lg mt-4 mb-6 md:text-2xl">
             {`I'm an aspiring software engineer from Miami-Dade, FL. Working towards cultivating and learning new skills. `}
           </p>
-          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-            <Link
-              to="about"
-              className="text-neutral-100 font-semibold px-6 py-3 bg-gray-700 rounded shadow hover:opacity-80 transition-opacity cursor-pointer"
-              activeClass="active"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-            >
-              About Me
-            </Link>
-            <Link
-              to="experience"
-              className="text-neutral-100 font-semibold px-6 py-3 bg-gray-700  rounded shadow hover:opacity-80 transition-opacity cursor-pointer"
-              activeClass="active"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-            >
-              Experience
-            </Link>
-            <Link
-              to="projects"
-              className="text-neutral-100 font-semibold px-6 py-3 bg-gray-700  rounded shadow hover:opacity-80 transition-opacity cursor-pointer"
-              activeClass="active"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-            >
-              Projects
-            </Link>
-            <Link
-              to="awards"
-              className="text-neutral-100 font-semibold px-6 py-3 bg-gray-700 rounded shadow hover:opacity-80 transition-opacity cursor-pointer"
-              activeClass="active"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-            >
-              Awards
-            </Link>
+          <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-4">
+            <GlassButton variant="primary" size="medium" className={buttonWidth}>
+              <Link
+                to="about"
+                className={linkClasses}
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
+                About Me
+              </Link>
+            </GlassButton>
+            <GlassButton variant="primary" size="medium" className={buttonWidth}>
+              <Link
+                to="experience"
+                className={linkClasses}
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
+                Experience
+              </Link>
+            </GlassButton>
+            <GlassButton variant="primary" size="medium" className={buttonWidth}>
+              <Link
+                to="projects"
+                className={linkClasses}
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
+                Projects
+              </Link>
+            </GlassButton>
+            <GlassButton variant="primary" size="medium" className={buttonWidth}>
+              <Link
+                to="awards"
+                className={linkClasses}
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
+                Awards
+              </Link>
+            </GlassButton>
           </div>
         </div>
       </div>

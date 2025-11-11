@@ -1,8 +1,6 @@
-"use client"
 import "../styles/globals.css"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
-import { ThemeProvider } from "next-themes"
 
 export default function RootLayout({
   children,
@@ -10,18 +8,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="night">
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx.
       */}
       <head />
-      <body className="dark:bg-stone-950">
-        <ThemeProvider enableSystem={true} attribute="class">
-          <Navbar />
-          {children}
-          <Footer />
-        </ThemeProvider>
+      <body className="min-h-screen bg-[#0e101a] text-white" data-theme="light">
+        <Navbar />
+        {children}
+        <Footer />
       </body>
     </html>
   )
